@@ -1,14 +1,9 @@
 #!/usr/bin/env python
 
-
-
 import gfal2
 import time
 
-
-
 ## Check for  SE (Storage Element)  status module
-
 try:
 
    ctxt = gfal2.creat_context()
@@ -19,16 +14,11 @@ except gfal2.GError as g:
 
     print 'Unable to connect to PNNL_SE'
     
-
-
 ## Check the files in the directory of user  module
 
 start_time = time.time()
-
 print 'Copy started ....'
-
 dir = ctxt.listdir("<< Specific URL of the user directory in the Storage Element >>")
-
 for i in range(0,10):
     if "file"+str(i) not in dir:
        params = ctxt.transfer_parameters()
@@ -39,7 +29,6 @@ for i in range(0,10):
 
     else:
         print 'fail'
-
 
 end_time = time.time() - start_time
 
