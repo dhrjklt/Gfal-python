@@ -1,3 +1,5 @@
 # Gfal-python
-python extension of the tool 
+python extension of the tool. 
 
+## License
+[MIT License](./LICENSE)
